@@ -26,7 +26,10 @@ public class Quiz {
 	}
 	
 	public void takeQuiz() {
-		//FIXME
+		for (int i = 0; i < questions.length; i++) {
+			this.questions[i].displayPrompt();
+			System.out.println(this.questions[i].checkAnswer(getUserAnswer()));
+		}
 	}
 	
 	public static void main(String[] args) {
